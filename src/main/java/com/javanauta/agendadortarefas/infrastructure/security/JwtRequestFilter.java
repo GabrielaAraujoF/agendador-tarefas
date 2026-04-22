@@ -9,7 +9,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.filter.OncePerRequestFilter;
-
 import java.io.IOException;
 
 // Define a classe JwtRequestFilter, que estende OncePerRequestFilter
@@ -47,6 +46,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
                 // Carrega os detalhes do usuário a partir do nome de usuário
                 UserDetails userDetails = userDetailsService.carregaDadosUsuario(username, authorizationHeader);
+
 
                 // Valida o token JWT
                 if (jwtUtil.validateToken(token, username)) {

@@ -4,7 +4,6 @@ import com.javanauta.agendadortarefas.infrastructure.enums.StatusNotificacaoEnum
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.time.LocalDateTime;
 
 
@@ -13,7 +12,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document("Tarefa")
+@Document("Tarefas")
+
 public class TarefasEntity {
 
     @Id
